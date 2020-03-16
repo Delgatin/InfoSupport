@@ -21,4 +21,8 @@ public class MyFirst {
         HW4 hw4 = new HW4();
         hw4.season("spring");
     }
+
+    private void something() {
+        //something
+    }
 }
