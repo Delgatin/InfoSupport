@@ -46,4 +46,37 @@ public class HW4 {
             }
         }
     }
+
+    public void printHourGlass(int length) throws EvenNumberException {
+        if (length%2 != 0) {
+            for(int i = 0; i < length; i++) {
+                if (i == 0) {
+                    printEntireLine(length);
+                } else if (i == length-1) {
+                    printEntireLine(length);
+                } else {
+                    printEdges(length, i);
+                }
+                System.out.println();
+            }
+        } else {
+            throw new EvenNumberException("This method only allows for uneven numbers to be used.");
+        }
+    }
+
+    private void printEntireLine(int length) {
+        for (int i = 0; i < length; i++) {
+            System.out.print("*");
+        }
+    }
+
+    private void printEdges(int maxLength, int i) {
+        for (int j = 0; j < maxLength; j++) {
+            if (j == i || j == (maxLength-1)-i) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
 }
