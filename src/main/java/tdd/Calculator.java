@@ -26,9 +26,17 @@ public class Calculator {
             }
         }
 
-        ArrayList<String> stringList = new ArrayList<>();
-
-        String regex = input.substring(0,1);
+        String regex;
+        try {
+            int value = Integer.parseInt(input.substring(0,1));
+            regex = ",";
+        } catch (NumberFormatException e) {
+            if (input.substring(0, 1).equals("-")) {
+                regex = ",";
+            } else {
+                regex = input.substring(0, 1);
+            }
+        }
 
         input = input.replace("\n", regex);
         String[] alleNummersString = input.split(regex);

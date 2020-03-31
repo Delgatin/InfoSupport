@@ -1,5 +1,9 @@
 package first;
 
+import first.hw10.Android;
+import first.hw10.Employee;
+import first.hw10.Person;
+import first.hw10.Teacher;
 import first.hw3.HW3;
 import first.hw4.EvenNumberException;
 import first.hw4.HW4;
@@ -13,7 +17,7 @@ import java.util.Arrays;
 
 public class MyFirst {
     public static void main(String[] args) throws EvenNumberException {
-        lab6();
+        hw10();
     }
 
     private static void opdrachtHW3() {
@@ -55,5 +59,19 @@ public class MyFirst {
         for (int i = 0; i < array.length; i++) {
             System.out.println(Arrays.toString(array2[i]));
         }
+    }
+
+    private static void hw10() {
+        Person p = new Person("Nino", 20);
+        Android a = new Android();
+        a.setCharge(33);
+        //a.charge(100);
+        Employee e = new Employee("Eric", 34);
+        Teacher t = new Teacher("Bram", 45);
+        System.out.println(p.greet());
+        System.out.println(a.greet());
+        System.out.println(e.greet());
+        System.out.println(t.greet());
+        System.out.println(e.getNaam());
     }
 }
