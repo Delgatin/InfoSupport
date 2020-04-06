@@ -6,22 +6,21 @@ import java.util.Objects;
 
 public class Person extends Human {
 
-    //private String naam;
+    //private String naam; // TODO BRAM opschonen
     private int leeftijd;
-    private Gender gender = Gender.UNKNOWN;
+    private Gender gender = Gender.UNKNOWN; // TODO BRAM opschonen.
     private final static int MAX_LEEFTIJD = 130;
 
     public static int numberOfPossibleGenders = Gender.values().length;
 
-
-    public Person (String naam, int leeftijd) {
+    public Person(String naam, int leeftijd) {
         this(naam, leeftijd, Gender.UNKNOWN);
-        System.gc();
+        System.gc(); // TODO BRAM BAH!
     }
 
-    public Person (String naam, int leeftijd, Gender gender) {
+    public Person(String naam, int leeftijd, Gender gender) {
         super(naam);
-        //this.naam = naam;
+        //this.naam = naam; // TODO BRAM opschonen
         this.leeftijd = leeftijd;
         this.gender = gender;
     }
@@ -34,6 +33,7 @@ public class Person extends Human {
         return this.name;
     }
 
+    // TODO BRAM opschonen ongebruikte getters/setters (maak geen onnodige aan)
     public void setNaam(String naam) {
         this.name = naam;
     }
@@ -54,6 +54,7 @@ public class Person extends Human {
         this.gender = gender;
     }
 
+    // TODO BRAM unused? geen test voor?
     public void haveBirthday() {
         if (leeftijd >= MAX_LEEFTIJD) {
             throw new PersonDiedException();
@@ -83,7 +84,7 @@ public class Person extends Human {
 
     @Override
     protected void finalize() throws Throwable {
-        System.out.println("Ik ben nu opgeruimt.");
+        System.out.println("Ik ben nu opgeruimt.");// TODO BRAM opgeruimD
         super.finalize();
     }
 }

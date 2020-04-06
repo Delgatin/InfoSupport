@@ -1,3 +1,4 @@
+// TODO BRAM zet je testjes in exact hetzelfde package als je main-code
 package hw10;
 
 import first.hw10.Android;
@@ -6,10 +7,11 @@ import first.hw10.Person;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+// TODO BRAM hoe is je testdekking?
 public class TestHumans {
 
     @Test
-    void testPersonRepsonse() {
+    void testPersonRepsonse() { // TODO BRAM typo
         Person p = new Person("Kees", 20);
         String response = p.greet();
         Assertions.assertEquals(response, "Hello, my name is Kees. Nice to meet you!");
@@ -25,6 +27,7 @@ public class TestHumans {
     void testAndroidGoodSetCharge() {
         Android a = new Android();
         a.setCharge(20);
+        // TODO BRAM assert?
     }
 
     @Test
@@ -39,6 +42,7 @@ public class TestHumans {
         Android a = new Android();
         a.setCharge(30);
         Assertions.assertEquals(53, a.charge(23));
+        // TODO BRAM dubbele test
     }
 
     @Test
